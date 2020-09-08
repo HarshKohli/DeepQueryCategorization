@@ -1,2 +1,10 @@
 train_file: dataset/train.csv
 test_file: dataset/test.csv
+num_epochs: 2
+batch_size: 8
+save_dir: model/tuned
+warmup_steps: 1000
+delimiter: ','
+base_model: roberta-base-nli-stsb-mean-tokens
+index_file: ann_index/categories.index
+category_map: ann_index/category_map.tsv
