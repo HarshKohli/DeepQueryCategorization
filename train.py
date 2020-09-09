@@ -8,8 +8,8 @@ import logging
 import yaml
 import os
 
-os.environ["TORCH_HOME"] = "model/base"
 config = yaml.safe_load(open('config.yml', 'r'))
+os.environ["TORCH_HOME"] = config['base_model_dir']
 
 logging.basicConfig(format='%(asctime)s - %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S',

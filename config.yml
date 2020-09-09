@@ -6,5 +6,6 @@ save_dir: model/tuned
 warmup_steps: 1000
 delimiter: ','
 base_model: roberta-base-nli-stsb-mean-tokens
+base_model_dir: model/base
 index_file: ann_index/categories.index
 category_map: ann_index/category_map.tsv
