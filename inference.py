@@ -1,10 +1,9 @@
 # Author: Harsh Kohli
 # Date created: 25/09/20
 
-from torch.utils.data import DataLoader
-from sentence_transformers.readers import InputExample
-from sentence_transformers import SentenceTransformer, SentencesDataset, LoggingHandler, losses, evaluation
-import logging
+
+from sentence_transformers import SentenceTransformer
+import faiss
 import yaml
 import os
 
@@ -22,4 +21,8 @@ for line in test_file.readlines():
         query_topics_map[query].append(topic)
     else:
         query_topics_map[query] = [topic]
+
+for query, topics in query_topics_map.items():
+    query_embedding = model.encode(query)
+    print('here')
 
