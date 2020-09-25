@@ -36,7 +36,7 @@ print('Done reading train file!')
 dev_sentences1 = []
 dev_sentences2 = []
 dev_labels = []
-dev_file = open(config['test_file'], 'r', encoding='utf8')
+dev_file = open(config['dev_file'], 'r', encoding='utf8')
 
 print('Reading dev file...')
 for line in dev_file.readlines():
@@ -44,7 +44,7 @@ for line in dev_file.readlines():
     try:
         dev_sentences2.append(info[1])
         dev_sentences1.append(info[0])
-        dev_labels.append(1)
+        dev_labels.append(int(info[2]))
     except:
         continue
 print('Done reading dev file!')

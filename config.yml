@@ -1,4 +1,5 @@
 train_file: dataset/train.csv
+dev_file: dataset/dev.csv
 test_file: dataset/test.csv
 num_epochs: 2
 batch_size: 8
