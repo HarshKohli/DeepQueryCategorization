@@ -3,6 +3,7 @@ dev_file: dataset/dev.csv
 test_file: dataset/test.csv
 num_epochs: 2
 batch_size: 8
+num_searches: 100000
 save_dir: model/tuned
 warmup_steps: 1000
 delimiter: ','

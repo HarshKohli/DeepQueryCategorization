@@ -18,7 +18,7 @@ classes = []
 
 print('Creating class index...')
 for line in train_file.readlines():
-    category = line.split(config['delimiter'])[1]
+    category = line.strip().split(config['delimiter'])[1]
     if category not in classes:
         classes.append(category)
 

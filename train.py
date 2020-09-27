@@ -25,7 +25,7 @@ print('Reading train file...')
 for index, line in enumerate(train_file.readlines()):
     if index % 10000 == 0:
         print('Processing row ' + str(index))
-    info = line.split(config['delimiter'])
+    info = line.strip().split(config['delimiter'])
     try:
         train_samples.append(InputExample(texts=[info[0], info[1]], label=1))
         train_samples.append(InputExample(texts=[info[1], info[0]], label=1))
@@ -40,7 +40,7 @@ dev_file = open(config['dev_file'], 'r', encoding='utf8')
 
 print('Reading dev file...')
 for line in dev_file.readlines():
-    info = line.split(config['delimiter'])
+    info = line.strip().split(config['delimiter'])
     try:
         dev_sentences2.append(info[1])
         dev_sentences1.append(info[0])
